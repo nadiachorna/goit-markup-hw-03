@@ -22,6 +22,7 @@ ul {
 }
 img {
   display: block;
+  max-width: 100%;
 }
 button {
   cursor: pointer;
@@ -135,6 +136,7 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--scnd-body-text-color);
+  margin-bottom: 30px;
 }
 .main-btn {
   min-width: 200px;
@@ -150,14 +152,17 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--scnd-body-text-color);
-  margin-top: 30px;
   padding: 10px 32px;
+  margin: 0 auto;
 }
 
 /* specifics */
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+.specifics {
+  padding-bottom: 0;
 }
 .section-title {
   font-weight: 700;
@@ -170,7 +175,6 @@ body {
 }
 .specifics-list {
   display: flex;
-  margin-bottom: 94px;
 }
 .work-list {
   display: flex;
@@ -183,7 +187,8 @@ body {
   margin-right: 0;
 }
 .specifics-item {
-  padding-right: 30px;
+  margin-right: 30px;
+  min-width: 270px;
 }
 .specifics-item:last-child {
   margin-right: 0;
@@ -193,7 +198,6 @@ body {
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   color: var(--body-text-color);
-  min-width: 270px;
 }
 .title {
   font-weight: 700;
@@ -220,6 +224,7 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  overflow: hidden;
 }
 .team-item:last-child {
   margin-right: 0;
@@ -235,7 +240,7 @@ body {
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--title-color);
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 .team-member-desc {
   font-size: 16px;
@@ -259,14 +264,15 @@ body {
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   color: var(--scnd-body-text-color);
-  margin-top: 20px;
   margin-bottom: 9px;
 }
 .scnd-logo {
+  display: block;
   font-family: Raleway;
   font-weight: 700;
   color: var(--scnd-body-text-color);
   margin-right: 0;
+  margin-bottom: 20px;
 }
 .footer .link {
   font-family: Roboto;
@@ -283,7 +289,9 @@ body {
 .footer-link:last-child {
   margin-bottom: 0;
 }
+
 /* portfolio */
+
 .buttons {
   display: flex;
   justify-content: center;
@@ -312,11 +320,26 @@ body {
   background-color: var(--accent-color);
   color: var(--scnd-body-text-color);
 }
+.portfolio-hidden-title {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
 .portfolio-list {
   display: flex;
-  flex-flow: wrap;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-bottom: -30px;
 }
 .portfolio-item {
+  width: 370px;
   flex-basis: calc(100% / 3 - 30px);
   margin-right: 30px;
   margin-bottom: 30px;
@@ -325,7 +348,6 @@ body {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
-  width: 370px;
 }
 .portfolio-title {
   font-weight: bold;
